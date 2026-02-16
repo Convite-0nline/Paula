@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <audio src="media/musica-do-album.mp3" id="audio"></audio>
+
+    <div class="contanir-paralax">
+        <div class="cobrir-paralax posicao-relative" style="background-image: linear-gradient(to top, black, blue);">
+            <p class="ola">Olá, Paula</p>
+            <p class="text">Dizem que desafio existem <br>para serem cumpridos. <br>
+            Você aceitou entrar nesse jogo <br>
+            agora não tem como fugir
+        </p>
+        <p class="text1">Se rolar a pagina abaixo, não terá mais voltar</p>
+        <p class="text2">Carregando<span class="loader"></span></p>
+
+        </div>
+    
+        <div class="paralax">
+
+        </div>
+
+<!-- Musica -->
+        <div class="cobrir-paralax musica-paralax" style="background-image: linear-gradient(to top, blue,black, black);">
+        <div class="album-musica" >
+        <div class="cabecalho">
+            <div></div>
+            <p>Vc é uma Garota Incrivél Paula</p>
+            <p style="font-size: 1.2em; font-weight: 1000;">. . . </p>
+        </div><!-- cabeçalho da musica-->
+
+
+
+        <div class="capa">
+            
+
+        </div> <!-- foto da capa do album de musica, ajusta no css-->
+
+
+
+        <input type="range" id="barra" value="0" >
+         <div class="tempo">
+            <span id="atual">00:00</span>
+            <span id="duracao">00:00</span>
+            
+         </div> 
+
+         <div class="nome-musica">
+            <h2>CANTOR</h2>
+            <p>eu te amo</p>
+         </div>
+
+
+        <div class="botoes">
+            <!-- 23F8 pause -->
+           <button>&#x23CF;</button>
+           <button>&#x23EE;</button>
+           <button id="btn-play-pause"> &#x25B6;</button>
+           <button>&#x23ED;</button>
+           <button>&#x267E;&#xFE0F;</button>
+        </div> 
+    </div> 
+
+        </div>
+    </div>
+    <div class="contanir-paralax2">
+
+        <div class="paralax">
+
+        </div>
+        <div class="cobrir-paralax">
+
+        </div>
+    </div>
+    
+
+
+
+
+    <script type="module" src="musica.js"></script>
+</body>
+</html>
