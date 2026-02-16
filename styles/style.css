@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +27,8 @@
     position: relative;
 }
 .ola{
+    font-family: "Lavishly Yours", cursive;
+    font-size: 2em;
     color: white;
     position: absolute;
     left: 50%;
@@ -31,7 +36,10 @@
     top: 60px;
 }
 .text{
-    top: 90px;
+      font-family: "Story Script", sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+    top: 120px;
     position: absolute;
     text-align: center;
     background-color: rgb(255, 255, 255);
