@@ -27,7 +27,7 @@
         </div>
 
 <!-- Musica -->
-        <div class="cobrir-paralax musica-paralax" style="background-image: linear-gradient(to top, blue,black, black);">
+        <div class="cobrir-paralax musica-paralax" style="background-image: linear-gradient(to top, red,black, black);">
         <div class="album-musica" >
         <div class="cabecalho">
             <div></div>
@@ -75,29 +75,31 @@
         <div class="paralax">
 
         </div>
-        <div class="cobrir-paralax" style="display: flex; flex-flow: column; justify-content: space-around;align-items: center;">
+        <div class="cobrir-paralax" style="display: flex; flex-flow: column; justify-content: space-around;align-items: center; background-color: black;">
             <p style="
-                background-color: aqua;
+                background-color: rgb(255, 255, 255);
                 width: 200px;
                 text-align: center;
                 padding: 30px;
+                border-radius: 10px;
+               animation: brilhar 2s infinite;
                 
                 
                 
                 ">Se Chegou até aqui <br>
             Quero que vc Saiba <br>
             que eu te acho uma <br> 
-            minha Incrivel <br>
+            Menina Incrivel <br>
             e Eu estou mecerendo <br>
             o meu tão esperado <br>
             beijo Ne?
             </p>
-            <p style="text-align: center;">
+            <p style="text-align: center; color: white;">
                ainda não precisar responder agora kkkkkk
                <br>
                se não for muito Curiosa, não aperte o botão abaixo
             </p>
-            <button
+            <button id="botao-prox-pagina"
             style="padding: 10px;
             border-radius: 10px;"
             >Aperte Aqui
@@ -111,5 +113,11 @@
 
 
     <script type="module" src="musica.js"></script>
+    <script>
+        const botao = document.getElementById('botao-prox-pagina');
+        botao.addEventListener("click",()=>{
+            location.href = "page/beijo.html"
+        })
+    </script>
 </body>
 </html>

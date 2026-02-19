@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me deve um beijo</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url("../img/fundo-romantico4.jpg");
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        #secundaria{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url("../img/fundo-romantico4.jpg");
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+        }
+        .posso{position: absolute;
+             font-family: "Mea Culpa", cursive;
+            
+            background-color: white;
+            padding: 0 10px ;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 2em;
+            top: 150px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.649);
+            
+        }
+        button{
+            width: 70px;
+            position: absolute;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(253, 233, 237);
+            top: 300px;
+        }
+        #sim{
+            left: 100px;
+        }
+        #nao{
+            right: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <audio src="../media/The-Neighbourhood.mp3" id="audio"></audio>
+    <main id="principal">
+        <p class="posso">Posso te Beijar?</p>
+        <button id="sim"> Sim</button>
+        <button id="nao" onclick="fugar()"> Não</button>
+
+    </main>
+    <div id="secundaria">
+        
+    </div>
+
+
+
+    <script>
+        const botaoSim = document.getElementById("sim");
+        const principal = document.getElementById("principal");
+        const secundaria = document.getElementById("secundaria");
+        const audio = document.getElementById("audio");
+        
+
+
+
+        function fugar(){
+            const botaoNao = document.getElementById("nao");
+            
+
+            const larguraJanela = window.innerWidth
+            const alturaJanela = window.innerHeight
+
+            let maxX = larguraJanela - botaoNao.offsetWidth
+            let maxY = alturaJanela - botaoNao.offsetHeight
+
+            let aleatorioX = Math.floor(Math.random()* maxX)
+            let aleatorioY = Math.floor(Math.random()* maxY)
+
+            botaoNao.style.left = aleatorioX + "px"
+            botaoNao.style.top = aleatorioY + "px"
+        }
+        botaoSim.addEventListener("click",()=>{
+            principal.style.display = "none"
+            secundaria.style.display = "block"
+            audio.play();
+
+        })
+    </script>
+    
+</body>
+</html>
