@@ -52,30 +52,37 @@
             border-radius: 10px;
             z-index: 100;
             text-align: center;
-            animation: aparecer-casal 3s linear;
+            opacity: 1; 
+            transition: opacity 1.5s ease;          
             
         }
-        .guns{
-            width: 70vw;
-            line-height: 2em;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-            z-index: 101;
-            display: none;
-            animation: aparecer-casal 3s linear;
-            opacity: 0.8;
-            
-        }
+        .fade-out{
+    opacity: 0;
+    
+}
+
+.fade-in{
+    opacity: 1;
+    
+   
+}
+       .guns{
+    width: 70vw;
+    line-height: 2em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 101;
+
+    opacity: 0;   /* invisível mas presente */
+}
 
         
-        .displaynone{
-            display: none;
-        }
+      
        
         .emoji{
             position: absolute;
@@ -143,10 +150,10 @@
 
         <p class="guns">
            " Ela tem um sorriso que parece <br>
-            Lembrar-me de momórias de infância <br>
+            Lembrar-me de memórias de infância <br>
             Onde tudo era fresco <br>
-            Como o brilante céu azul <br>
-            De vez em quanto eu vejo seu rosto <br>
+            Como o brilhante céu azul <br>
+            De vez enquanto eu vejo seu rosto <br>
             Ele me leva para aquele lugar especial <br>
             E se eu olhasse por muito tempo <br>
             Provavelmente perderia o controle e choraria" <br>
@@ -209,14 +216,14 @@
 
           }
           setInterval(criarEmoji,500)
-          setTimeout(()=>{
-            cabeca.classList.add("displaynone")
-          },14000)
-          setTimeout(()=>{
-            const guns = document.querySelector(".guns")
-            guns.style.display = "block"
-           
-          },16000)
+        setTimeout(()=>{
+                cabeca.classList.add("fade-out")
+            },14000)
+const guns = document.querySelector(".guns")
+setTimeout(()=>{
+    
+            guns.classList.add("fade-in")
+        },16000)
     </script>
     
 </body>
