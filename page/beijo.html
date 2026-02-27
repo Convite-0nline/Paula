@@ -42,6 +42,41 @@
             animation: aparecer-casal 3s linear;
             z-index: 99;
         }
+        .cabeca{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 100;
+            text-align: center;
+            animation: aparecer-casal 3s linear;
+            
+        }
+        .guns{
+            width: 70vw;
+            line-height: 2em;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 101;
+            display: none;
+            animation: aparecer-casal 3s linear;
+            opacity: 0.8;
+            
+        }
+
+        
+        .displaynone{
+            display: none;
+        }
+       
         .emoji{
             position: absolute;
             top: -50%;
@@ -104,6 +139,18 @@
     </main>
     <div id="secundaria">
         <img src="../img/png-casal.png" alt="">
+        <p class="cabeca"> Toda vez que <br> <strong>EU TE VEJO</strong> <br>toca essa musica na minha cabeça</p>
+
+        <p class="guns">
+           " Ela tem um sorriso que parece <br>
+            Lembrar-me de momórias de infância <br>
+            Onde tudo era fresco <br>
+            Como o brilante céu azul <br>
+            De vez em quanto eu vejo seu rosto <br>
+            Ele me leva para aquele lugar especial <br>
+            E se eu olhasse por muito tempo <br>
+            Provavelmente perderia o controle e choraria" <br>
+        </p>
         
     </div>
 
@@ -114,6 +161,7 @@
         const principal = document.getElementById("principal");
         const secundaria = document.getElementById("secundaria");
         const audio = document.getElementById("audio");
+        const cabeca = document.querySelector(".cabeca");
         
 
 
@@ -161,6 +209,14 @@
 
           }
           setInterval(criarEmoji,500)
+          setTimeout(()=>{
+            cabeca.classList.add("displaynone")
+          },14000)
+          setTimeout(()=>{
+            const guns = document.querySelector(".guns")
+            guns.style.display = "block"
+           
+          },16000)
     </script>
     
 </body>
