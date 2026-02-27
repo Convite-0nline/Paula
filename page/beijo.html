@@ -52,37 +52,30 @@
             border-radius: 10px;
             z-index: 100;
             text-align: center;
-            opacity: 1; 
-            transition: opacity 1.5s ease;          
+            animation: aparecer-casal 3s linear;
             
         }
-        .fade-out{
-    opacity: 0;
-    
-}
-
-.fade-in{
-    opacity: 1;
-    
-   
-}
-       .guns{
-    width: 70vw;
-    line-height: 2em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 101;
-
-    opacity: 0;   /* invisível mas presente */
-}
+        .guns{
+            width: 70vw;
+            line-height: 2em;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 101;
+            display: none;
+            animation: aparecer-casal 3s linear;
+            opacity: 0.8;
+            
+        }
 
         
-      
+        .displaynone{
+            display: none;
+        }
        
         .emoji{
             position: absolute;
@@ -169,6 +162,7 @@
         const secundaria = document.getElementById("secundaria");
         const audio = document.getElementById("audio");
         const cabeca = document.querySelector(".cabeca");
+        const guns = document.querySelector(".guns")
         
 
 
@@ -216,14 +210,14 @@
 
           }
           setInterval(criarEmoji,500)
-        setTimeout(()=>{
-                cabeca.classList.add("fade-out")
-            },14000)
-const guns = document.querySelector(".guns")
-setTimeout(()=>{
-    
-            guns.classList.add("fade-in")
-        },16000)
+          setTimeout(()=>{
+            cabeca.classList.add("displaynone")
+          },14000)
+          setTimeout(()=>{
+            
+            guns.style.display = "block"
+           
+          },16000)
     </script>
     
 </body>
