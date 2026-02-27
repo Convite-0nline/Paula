@@ -23,6 +23,7 @@
 
         }
         #secundaria{
+            overflow: hidden;
             position: relative;
             width: 100%;
             min-height: 100vh;
@@ -31,6 +32,36 @@
             background-repeat: no-repeat;
             background-size: cover;
             display: none;
+        }
+        #secundaria img{
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: aparecer-casal 3s linear;
+            z-index: 99;
+        }
+        .emoji{
+            position: absolute;
+            top: -50%;
+            font-size: 30px;
+            animation: cair linear forwards;
+        }
+        @keyframes cair{
+            to{
+                transform: translateY(1200px);
+            }
+        }
+
+        @keyframes aparecer-casal{
+            0%{
+                opacity: 0;
+
+            }
+            100%{
+                opacity: 1;
+            }
         }
         .posso{position: absolute;
              font-family: "Mea Culpa", cursive;
@@ -72,6 +103,7 @@
 
     </main>
     <div id="secundaria">
+        <img src="../img/png-casal.png" alt="">
         
     </div>
 
@@ -106,8 +138,29 @@
             principal.style.display = "none"
             secundaria.style.display = "block"
             audio.play();
+           
 
         })
+
+          const emojis = ["❤️", "😍", "🥰", "💖", "✨", "🌹"]
+          
+          function criarEmoji(){
+            const emoji = document.createElement("div")
+            emoji.classList.add("emoji")
+            emoji.innerText = emojis[Math.floor(Math.random()*emojis.length)]
+
+            emoji.style.left = Math.random() * secundaria.offsetWidth + "px"
+            emoji.style.animationDuration = (Math.random()*8+2) +"s"
+            emoji.style.fontSize = (Math.random() *30+20) +"px"
+            
+            secundaria.appendChild(emoji)
+
+            setTimeout(()=>{
+                emoji.remove()
+            },6000)
+
+          }
+          setInterval(criarEmoji,500)
     </script>
     
 </body>

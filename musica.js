@@ -6,10 +6,12 @@ const duracao = document.querySelector('#duracao');
 
 btn_Play_Pause.addEventListener('click', ()=>{
     if(audio.paused ===true){
+        audio.volume =0.5
         audio.play()
         btn_Play_Pause.innerHTML = '||'
     }
     else{
+        
         audio.pause()
         btn_Play_Pause.innerHTML = '&#x25B6;'
         
