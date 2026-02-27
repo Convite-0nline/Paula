@@ -29,7 +29,7 @@
 .ola{
     font-family: "Lavishly Yours", cursive;
     font-size: 2em;
-    color: white;
+    color: black;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -56,7 +56,7 @@
 }
 .text1{
     text-align: center;
-    color: white;
+    color: black;
     position: absolute;
     width: 100vw;
     left: 50%;
@@ -64,7 +64,7 @@
     top: 500px;
 }
 .text2{
-    color: white;
+    color: black;
     position: absolute;
     bottom: 120px;
     left: 50%;
